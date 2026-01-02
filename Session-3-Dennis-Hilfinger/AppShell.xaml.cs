@@ -20,6 +20,8 @@
             Routing.RegisterRoute(nameof(EventConfirmationPage), typeof(EventConfirmationPage));
             Routing.RegisterRoute(nameof(MyRaceResultsPage), typeof(MyRaceResultsPage));
             Routing.RegisterRoute(nameof(AllRaceResultsPage), typeof(AllRaceResultsPage));
+            Routing.RegisterRoute(nameof(AboutMarathonSkillsPage), typeof(AboutMarathonSkillsPage));
+            Routing.RegisterRoute(nameof(InteractiveMapPage), typeof(InteractiveMapPage));
         }
     }
 }

@@ -56,6 +56,22 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\marathon\banco_banespa.jpg" />
+	  <None Remove="Resources\Images\marathon\ibirapuera_park_lake.jpg" />
+	  <None Remove="Resources\Images\marathon\marathon_image.jpg" />
+	  <None Remove="Resources\Images\marathon\marathon_map.jpg" />
+	  <None Remove="Resources\Images\marathon\teatro_municipal.jpg" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiImage Include="Resources\Images\marathon\banco_banespa.jpg" />
+	  <MauiImage Include="Resources\Images\marathon\ibirapuera_park_lake.jpg" />
+	  <MauiImage Include="Resources\Images\marathon\marathon_image.jpg" />
+	  <MauiImage Include="Resources\Images\marathon\marathon_map.jpg" />
+	  <MauiImage Include="Resources\Images\marathon\teatro_municipal.jpg" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.11" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.11" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.11">
@@ -67,6 +83,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="AboutMarathonSkillsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="AdminPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -95,6 +114,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="FindOutMorePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="InteractiveMapPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="LoginPage.xaml">

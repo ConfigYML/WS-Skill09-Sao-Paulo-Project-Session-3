@@ -26,7 +26,7 @@ public partial class FindOutMorePage : ContentPage
 
     private async void AboutMarathonSkills(object sender, EventArgs e)
 	{
-		await DisplayAlert("Functionality not implemented", "This feature is not implemented yet.", "OK");
+        await Shell.Current.GoToAsync("AboutMarathonSkillsPage");
     }
     private async void PreviousRaceResults(object sender, EventArgs e)
     {

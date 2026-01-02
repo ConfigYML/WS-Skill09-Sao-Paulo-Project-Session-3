@@ -60,16 +60,8 @@ public partial class MyRaceResultsPage : ContentPage, IQueryAttributable
                     .Include(r => r.Registration)
                     .Include(r => r.Event)
                     .Include(r => r.Registration)
+                    .Where(r => r.Registration.RunnerId == user.Runners.First().RunnerId)
                     .ToList();
-                foreach (var registration in results)
-                {
-                    if (!runnerRegistrations.Any(r => r.RegistrationId == registration.RegistrationId))
-                    {
-                        results.Remove(registration);
-                    }
-                }
-                
-                List<RegistrationDTO> races = new List<RegistrationDTO>();
                 foreach (var result in results)
                 {
                     RegistrationDTO race = new RegistrationDTO();
@@ -79,6 +71,7 @@ public partial class MyRaceResultsPage : ContentPage, IQueryAttributable
                     if (marathon != null)
                     {
                         race.MarathonName = $"{marathon.YearHeld} - {marathon.CityName}, {marathon.CountryCodeNavigation.CountryName}";
+                        race.EventType = result.Event.EventName;
                         if (result.RaceTime < 0 || result.RaceTime == null)
                         {
                             race.RaceTime = "N/A";
@@ -94,29 +87,70 @@ public partial class MyRaceResultsPage : ContentPage, IQueryAttributable
                             var overallRankSelect = db.RegistrationEvents
                                 .Where(r => r.EventId == result.EventId && r.RaceTime.HasValue && r.RaceTime > 0)
                                 .OrderBy(r => r.RaceTime);
-                            var positions = new Dictionary<int, RegistrationEvent>();
+                            List<RankDTO> positions = new List<RankDTO>();
                             for (int i = 1; i <= overallRankSelect.Count(); i++)
                             {
                                 var rank = i;
                                 if (i > 1)
                                 {
-                                    var previousPos = positions.FirstOrDefault(p => p.Key == i - 1);
-                                    if (previousPos.Value.RaceTime == overallRankSelect.ElementAt(i - 1).RaceTime)
+                                    var previousPos = positions.ElementAt(i - 2);
+                                    var targetPos = overallRankSelect.ElementAt(i - 2);
+                                    if (previousPos.Registration.RaceTime == targetPos.RaceTime)
                                     {
-                                        rank = previousPos.Key;
-                                    }
+                                        rank = previousPos.rank;
+                                    } 
                                 }
-                                positions.Add(rank, overallRankSelect.ElementAt(i - 1));
+                                positions.Add(new RankDTO(){
+                                    rank = rank, 
+                                    Registration = overallRankSelect.ElementAt(i - 1) 
+                                });
                             }
-                            race.OverallRank = "#" + positions.FirstOrDefault(p => p.Value.RegistrationEventId == result.RegistrationEventId).Key.ToString();
+                            race.OverallRank = "#" + positions.FirstOrDefault(p => p.Registration.RegistrationId == result.RegistrationId).rank.ToString();
                         }
                     }
+                    AddResult(race);
                 }
             }
         } catch (Exception ex)
         {
             DisplayAlert("Error occurred", "Something went wrong while loading your race results", "Ok");
         }
+    }
+
+    private void AddResult(RegistrationDTO race)
+    {
+        var row = ResultsGrid.RowDefinitions.Count;
+        ResultsGrid.AddRowDefinition(new RowDefinition());
+
+        Label marathonLabel = new Label();
+        marathonLabel.Text = race.MarathonName;
+        Grid.SetRow(marathonLabel, row);
+        Grid.SetColumn(marathonLabel, 0);
+        ResultsGrid.Children.Add(marathonLabel);
+
+        Label EventLabel = new Label();
+        EventLabel.Text = race.EventType;
+        Grid.SetRow(EventLabel, row);
+        Grid.SetColumn(EventLabel, 1);
+        ResultsGrid.Children.Add(EventLabel);
+
+        Label TimeLabel = new Label();
+        TimeLabel.Text = race.RaceTime;
+        Grid.SetRow(TimeLabel, row);
+        Grid.SetColumn(TimeLabel, 2);
+        ResultsGrid.Children.Add(TimeLabel);
+
+        Label OverallLabel = new Label();
+        OverallLabel.Text = race.OverallRank;
+        Grid.SetRow(OverallLabel, row);
+        Grid.SetColumn(OverallLabel, 3);
+        ResultsGrid.Children.Add(OverallLabel);
+
+        Label CategoryLabel = new Label();
+        CategoryLabel.Text = race.CategoryRank;
+        Grid.SetRow(CategoryLabel, row);
+        Grid.SetColumn(CategoryLabel, 4);
+        ResultsGrid.Children.Add(CategoryLabel);
     }
 
     private void SetAgeCategory()
@@ -159,6 +193,11 @@ public partial class MyRaceResultsPage : ContentPage, IQueryAttributable
         
     }
 
+    class RankDTO
+    {
+        public int rank { get; set; }
+        public RegistrationEvent Registration { get; set; }
+    }
     class RegistrationDTO
     {
         public string MarathonName { get; set; }
