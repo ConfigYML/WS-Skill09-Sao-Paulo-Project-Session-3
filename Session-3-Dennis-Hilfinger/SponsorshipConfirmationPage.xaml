@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Session_3_Dennis_Hilfinger.SponsorshipConfirmationPage"
+             Title="">
+    <Grid 
+RowDefinitions="*, 5*, *"
+ColumnDefinitions="*"
+VerticalOptions="Fill"
+HorizontalOptions="Fill">
+        <Grid 
+    ColumnDefinitions="*,4*,*"
+    HorizontalOptions="Fill"
+    VerticalOptions="End">
+            <Image 
+        Source="logo_2015_full_colour.png"
+        Margin="20"/>
+            <Label 
+        Grid.Column="1"
+        FontSize="40"
+        Text="MarathonSkills 2015"
+        HorizontalTextAlignment="Center"
+        VerticalTextAlignment="Center"
+        Padding="20"/>
+        </Grid>
+
+        <ScrollView
+    Grid.Row="1">
+            <VerticalStackLayout
+        Padding="30"
+        Spacing="25"
+        VerticalOptions="Center">
+
+                <Label 
+                Text="Sponsor runner"
+                HorizontalOptions="Center"
+                FontSize="32"/>
+                <Label 
+                WidthRequest="800"
+                Text="Thank you for sponsoring a runner in Marathon Skills 2015! Your donation will help out their chosen charity!"
+                HorizontalOptions="Center"
+                FontSize="20"/>
+
+                <Grid ColumnDefinitions="*">
+                    <VerticalStackLayout
+                        Spacing="20">
+
+                        <Label
+                            x:Name="RunnerLabel"
+                            HorizontalOptions="Center"
+                            FontSize="20"/>
+                        <Label
+                            Text="Save The Cats Fund"
+                            HorizontalOptions="Center"
+                            x:Name="CharityLabel"
+                            FontSize="26"/>
+                        <Label
+                            x:Name="AmountLabel"
+                            HorizontalOptions="Center"
+                            FontSize="80"/>
+                        <Button 
+                            Text="Back"
+                            WidthRequest="200"
+                            HeightRequest="50"
+                            FontSize="20"
+                            HorizontalOptions="Center"
+                            Style="{StaticResource ButtonYellow}"
+                            Clicked="BackToMainPage"/>
+
+                    </VerticalStackLayout>
+                </Grid>
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <Label 
+            x:Name="TimerLabel"
+            Grid.Row="2"
+            HorizontalOptions="Fill"
+            VerticalOptions="End"
+            Text="0 days 0 hours and 0 minutes until the race starts!"
+            HorizontalTextAlignment="Center"
+            Padding="20"
+            Style="{StaticResource TimerLabel}"/>
+    </Grid>
+</ContentPage>

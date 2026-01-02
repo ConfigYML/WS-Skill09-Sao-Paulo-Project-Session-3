@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Session_3_Dennis_Hilfinger.RegisterEventPage"
+             Title="">
+    <Grid 
+    RowDefinitions="*, 5*, *"
+    ColumnDefinitions="*"
+    VerticalOptions="Fill"
+    HorizontalOptions="Fill">
+        <Grid 
+        ColumnDefinitions="*,4*,*"
+        HorizontalOptions="Fill"
+        VerticalOptions="End">
+            <Image 
+                Source="logo_2015_full_colour.png"
+                Margin="20"/>
+            <Label 
+                Grid.Column="1"
+                FontSize="40"
+                Text="MarathonSkills 2015"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
+                Padding="20"/>
+            <Button 
+                Grid.Column="2"
+                Text="Logout"
+                WidthRequest="200"
+                HeightRequest="50"
+                Style="{StaticResource ButtonGreen}"
+                Clicked="Logout"/>
+        </Grid>
+
+        <ScrollView
+        Grid.Row="1"
+        VerticalOptions="Start">
+            <VerticalStackLayout
+            Spacing="25">
+                <Label 
+                Text="Register for an event"
+                HorizontalOptions="Center"
+                FontSize="32"/>
+                <Label 
+                WidthRequest="800"
+                Text="Please fill out the all the following information to register for events in the Skill Marathon 2015 being held in Sao Paulo, Brazil. You will be contacted after you have registered to organise payment and other details."
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                FontSize="20"/>
+                <Grid
+                ColumnDefinitions="*,*"
+                Padding="10"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center">
+
+                    <VerticalStackLayout 
+                    WidthRequest="250"
+                    Spacing="10" 
+                    Padding="25" 
+                        VerticalOptions="Start">
+                        <Label 
+                            Text="Competition events"
+                            HorizontalOptions="Center"
+                            FontSize="28"/>
+                        <VerticalStackLayout 
+                            x:Name="EventTypeCheckboxes"/>
+                        <Label 
+                            Text="Sponsorship details"
+                            HorizontalOptions="Center"
+                            FontSize="28"/>
+                        <Picker 
+                            x:Name="CharityPicker"
+                            Title="Charity:"/>
+                        <Entry 
+                            x:Name="SponsorshipTargetEntry"
+                            Placeholder="Target to raise"/>
+
+                        <HorizontalStackLayout
+                            Spacing="15"
+                            HorizontalOptions="Center">
+                            <Button 
+                                Text="Register"
+                                WidthRequest="80"
+                                HeightRequest="50"
+                                Style="{StaticResource ButtonBlue}"
+                                Clicked="Register"/>
+                            <Button 
+                                Text="Cancel"
+                                WidthRequest="80"
+                                HeightRequest="50"
+                                Style="{StaticResource ButtonYellow}"
+                                Clicked="Cancel"/>
+                        </HorizontalStackLayout>
+
+                    </VerticalStackLayout>
+                    <VerticalStackLayout 
+                    Grid.Column="2"
+                    WidthRequest="250"
+                    Spacing="10" 
+                    Padding="25"
+                        VerticalOptions="Start">
+                        <Label 
+                            Text="Race kit options"
+                            HorizontalOptions="Center"
+                            FontSize="28"/>
+                        <VerticalStackLayout 
+                            x:Name="RaceKitOptionRadioButtons"/>
+                        <Label 
+                            Text="Registration costs"
+                            HorizontalOptions="Center"
+                            FontSize="28"/>
+                        <Label 
+                            x:Name="CalculatedValueLabel"
+                            Text="$0"
+                            FontSize="50"/>
+                    </VerticalStackLayout>
+
+                </Grid>
+            </VerticalStackLayout>
+
+        </ScrollView>
+
+        <Label 
+        x:Name="TimerLabel"
+        Grid.Row="2"
+        HorizontalOptions="Fill"
+        VerticalOptions="End"
+        Text="0 days 0 hours and 0 minutes until the race starts!"
+        HorizontalTextAlignment="Center"
+        Padding="20"
+        Style="{StaticResource TimerLabel}"/>
+    </Grid>
+</ContentPage>

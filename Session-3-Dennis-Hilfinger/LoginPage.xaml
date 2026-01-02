@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Session_3_Dennis_Hilfinger.LoginPage"
+             Title="">
+    <Grid 
+    RowDefinitions="*, 5*, *"
+    ColumnDefinitions="*"
+    VerticalOptions="Fill"
+    HorizontalOptions="Fill">
+        <Grid 
+        ColumnDefinitions="*,4*,*"
+        HorizontalOptions="Fill"
+        VerticalOptions="End">
+            <Image 
+            Source="logo_2015_full_colour.png"
+            Margin="20"/>
+            <Label 
+            Grid.Column="1"
+            FontSize="40"
+            Text="MarathonSkills 2015"
+            HorizontalTextAlignment="Center"
+            VerticalTextAlignment="Center"
+            Padding="20"/>
+        </Grid>
+
+        <ScrollView
+        Grid.Row="1">
+            <VerticalStackLayout
+                Padding="30"
+                Spacing="25"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center">
+
+                <Label 
+                    Text="Login"
+                    HorizontalOptions="Center"
+                    FontSize="32"/>
+                <Label 
+                    WidthRequest="800"
+                    Text="Please log in using your email address and password"
+                    HorizontalOptions="Center"
+                    FontSize="20"/>
+
+                <Entry
+                    x:Name="EmailEntry"
+                    Placeholder="Email"/>
+                <Entry
+                    x:Name="PasswordEntry"
+                    Placeholder="Password"
+                    IsPassword="True"/>
+
+                <HorizontalStackLayout
+                    Spacing="50">
+                    <Button
+                         Text="Login"
+                         WidthRequest="250"
+                         HeightRequest="50"
+                         FontSize="16"
+                         Style="{StaticResource ButtonBlue}"
+                         Clicked="CheckLogin"/>
+
+                    <Button 
+                         Text="Cancel"
+                         WidthRequest="250"
+                         HeightRequest="50"
+                         Style="{StaticResource ButtonYellow}"
+                         Clicked="Cancel"/>  
+                </HorizontalStackLayout>
+               
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <Label 
+        x:Name="TimerLabel"
+        Grid.Row="2"
+        HorizontalOptions="Fill"
+        VerticalOptions="End"
+        Text="0 days 0 hours and 0 minutes until the race starts!"
+        HorizontalTextAlignment="Center"
+        Padding="20"
+        Style="{StaticResource TimerLabel}"/>
+    </Grid>
+</ContentPage>

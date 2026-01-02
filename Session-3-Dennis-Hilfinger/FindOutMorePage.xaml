@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Session_3_Dennis_Hilfinger.FindOutMorePage"
+             Title="">
+    <Grid 
+RowDefinitions="*, 5*, *"
+ColumnDefinitions="*"
+VerticalOptions="Fill"
+HorizontalOptions="Fill">
+        <Grid 
+    ColumnDefinitions="*,4*,*"
+    HorizontalOptions="Fill"
+    VerticalOptions="End">
+            <Image 
+        Source="logo_2015_full_colour.png"
+        Margin="20"/>
+            <Label 
+        Grid.Column="1"
+        FontSize="40"
+        Text="MarathonSkills 2015"
+        HorizontalTextAlignment="Center"
+        VerticalTextAlignment="Center"
+        Padding="20"/>
+        </Grid>
+
+        <ScrollView
+    Grid.Row="1">
+            <VerticalStackLayout
+        Padding="30"
+        Spacing="25"
+        VerticalOptions="Center">
+
+                <Label 
+                Text="Sponsor runner"
+                HorizontalOptions="Center"
+                FontSize="32"/>
+                <Label 
+                WidthRequest="800"
+                Text="Please choose the runner you would like to sponsor and the amount you would like to sponsor them for. Thank you for your support of the runners and their charities!"
+                HorizontalOptions="Center"
+                FontSize="20"/>
+
+                <Grid ColumnDefinitions="*,*">
+                    <VerticalStackLayout
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Spacing="25">
+
+                        <Button
+                            Text="Marathon Skills 2015"
+                            Clicked="AboutMarathonSkills"
+                            FontSize="20"
+                            WidthRequest="300"
+                            HeightRequest="50"
+                            Style="{StaticResource ButtonYellow}"/>
+                        <Button
+                            Text="Previous Race Results"
+                            Clicked="PreviousRaceResults"
+                            FontSize="20"
+                            WidthRequest="300"
+                            HeightRequest="50"
+                            Style="{StaticResource ButtonYellow}"/>
+                        <Button
+                            Text="BMI calculator"
+                            Clicked="BmiCalc"
+                            FontSize="20"
+                            WidthRequest="300"
+                            HeightRequest="50"
+                            Style="{StaticResource ButtonYellow}"/>
+
+                    </VerticalStackLayout>
+                    <VerticalStackLayout
+                        Grid.Column="1"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        Spacing="25">
+
+                        <Button
+                            Text="How long is a marathon?"
+                            Clicked="MarathonInfo"
+                            FontSize="20"
+                            WidthRequest="300"
+                            HeightRequest="50"
+                            Style="{StaticResource ButtonYellow}"/>
+                        <Button
+                            Text="List of charities"
+                            Clicked="ListOfCharities"
+                            FontSize="20"
+                            WidthRequest="300"
+                            HeightRequest="50"
+                            Style="{StaticResource ButtonYellow}"/>
+                        <Button
+                            Text="BMR calculator"
+                            Clicked="BmrCalc"
+                            FontSize="20"
+                            WidthRequest="300"
+                            HeightRequest="50"
+                            Style="{StaticResource ButtonYellow}"/>
+
+                    </VerticalStackLayout>
+                </Grid>
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <Label 
+        x:Name="TimerLabel"
+    Grid.Row="2"
+    HorizontalOptions="Fill"
+    VerticalOptions="End"
+    Text="0 days 0 hours and 0 minutes until the race starts!"
+    HorizontalTextAlignment="Center"
+    Padding="20"
+    Style="{StaticResource TimerLabel}"/>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,151 @@
+is_global = true
+build_property.TargetFramework = net9.0-windows10.0.19041.0
+build_property.TargetFramework = net9.0-windows10.0.19041.0
+build_property.TargetPlatformMinVersion = 10.0.17763.0
+build_property.TargetPlatformMinVersion = 10.0.17763.0
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 9A19103F-16F7-4668-BE54-9A1E7A4F7556
+build_property.ProjectTypeGuids = 9A19103F-16F7-4668-BE54-9A1E7A4F7556
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Session_3_Dennis_Hilfinger
+build_property.ProjectDir = C:\2_WorldSkills\Training\Sao_Paulo_2015\WS-Skill09-Sao-Paulo-Project-Session-3\Session-3-Dennis-Hilfinger\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.CsWinRTAotOptimizerEnabled = true
+build_property.CsWinRTAotExportsEnabled = 
+build_property.CsWinRTRcwFactoryFallbackGeneratorForceOptIn = 
+build_property.CsWinRTRcwFactoryFallbackGeneratorForceOptOut = 
+build_property.CsWinRTCcwLookupTableGeneratorEnabled = true
+build_property.CsWinRTMergeReferencedActivationFactories = 
+build_property.CsWinRTAotWarningLevel = 
+build_property.CsWinRTUseWindowsUIXamlProjections = false
+build_property.EffectiveAnalysisLevelStyle = 9.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/2_WorldSkills/Training/Sao_Paulo_2015/WS-Skill09-Sao-Paulo-Project-Session-3/Session-3-Dennis-Hilfinger/AdminPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Session_3_Dennis_Hilfinger.AdminPage.xaml
+build_metadata.AdditionalFiles.TargetPath = AdminPage.xaml
+build_metadata.AdditionalFiles.RelativePath = AdminPage.xaml
+
+[C:/2_WorldSkills/Training/Sao_Paulo_2015/WS-Skill09-Sao-Paulo-Project-Session-3/Session-3-Dennis-Hilfinger/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Session_3_Dennis_Hilfinger.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/2_WorldSkills/Training/Sao_Paulo_2015/WS-Skill09-Sao-Paulo-Project-Session-3/Session-3-Dennis-Hilfinger/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Session_3_Dennis_Hilfinger.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/2_WorldSkills/Training/Sao_Paulo_2015/WS-Skill09-Sao-Paulo-Project-Session-3/Session-3-Dennis-Hilfinger/CharityInfoPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Session_3_Dennis_Hilfinger.CharityInfoPage.xaml
+build_metadata.AdditionalFiles.TargetPath = CharityInfoPage.xaml
+build_metadata.AdditionalFiles.RelativePath = CharityInfoPage.xaml
+
+[C:/2_WorldSkills/Training/Sao_Paulo_2015/WS-Skill09-Sao-Paulo-Project-Session-3/Session-3-Dennis-Hilfinger/CharityListPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Session_3_Dennis_Hilfinger.CharityListPage.xaml
+build_metadata.AdditionalFiles.TargetPath = CharityListPage.xaml
+build_metadata.AdditionalFiles.RelativePath = CharityListPage.xaml
+
+[C:/2_WorldSkills/Training/Sao_Paulo_2015/WS-Skill09-Sao-Paulo-Project-Session-3/Session-3-Dennis-Hilfinger/CompetedBeforePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Session_3_Dennis_Hilfinger.CompetedBeforePage.xaml
+build_metadata.AdditionalFiles.TargetPath = CompetedBeforePage.xaml
+build_metadata.AdditionalFiles.RelativePath = CompetedBeforePage.xaml
+
+[C:/2_WorldSkills/Training/Sao_Paulo_2015/WS-Skill09-Sao-Paulo-Project-Session-3/Session-3-Dennis-Hilfinger/ContactInformationPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Session_3_Dennis_Hilfinger.ContactInformationPage.xaml
+build_metadata.AdditionalFiles.TargetPath = ContactInformationPage.xaml
+build_metadata.AdditionalFiles.RelativePath = ContactInformationPage.xaml
+
+[C:/2_WorldSkills/Training/Sao_Paulo_2015/WS-Skill09-Sao-Paulo-Project-Session-3/Session-3-Dennis-Hilfinger/CoordinatorPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Session_3_Dennis_Hilfinger.CoordinatorPage.xaml
+build_metadata.AdditionalFiles.TargetPath = CoordinatorPage.xaml
+build_metadata.AdditionalFiles.RelativePath = CoordinatorPage.xaml
+
+[C:/2_WorldSkills/Training/Sao_Paulo_2015/WS-Skill09-Sao-Paulo-Project-Session-3/Session-3-Dennis-Hilfinger/EditProfilePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Session_3_Dennis_Hilfinger.EditProfilePage.xaml
+build_metadata.AdditionalFiles.TargetPath = EditProfilePage.xaml
+build_metadata.AdditionalFiles.RelativePath = EditProfilePage.xaml
+
+[C:/2_WorldSkills/Training/Sao_Paulo_2015/WS-Skill09-Sao-Paulo-Project-Session-3/Session-3-Dennis-Hilfinger/EventConfirmationPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Session_3_Dennis_Hilfinger.EventConfirmationPage.xaml
+build_metadata.AdditionalFiles.TargetPath = EventConfirmationPage.xaml
+build_metadata.AdditionalFiles.RelativePath = EventConfirmationPage.xaml
+
+[C:/2_WorldSkills/Training/Sao_Paulo_2015/WS-Skill09-Sao-Paulo-Project-Session-3/Session-3-Dennis-Hilfinger/FindOutMorePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Session_3_Dennis_Hilfinger.FindOutMorePage.xaml
+build_metadata.AdditionalFiles.TargetPath = FindOutMorePage.xaml
+build_metadata.AdditionalFiles.RelativePath = FindOutMorePage.xaml
+
+[C:/2_WorldSkills/Training/Sao_Paulo_2015/WS-Skill09-Sao-Paulo-Project-Session-3/Session-3-Dennis-Hilfinger/LoginPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Session_3_Dennis_Hilfinger.LoginPage.xaml
+build_metadata.AdditionalFiles.TargetPath = LoginPage.xaml
+build_metadata.AdditionalFiles.RelativePath = LoginPage.xaml
+
+[C:/2_WorldSkills/Training/Sao_Paulo_2015/WS-Skill09-Sao-Paulo-Project-Session-3/Session-3-Dennis-Hilfinger/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Session_3_Dennis_Hilfinger.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[C:/2_WorldSkills/Training/Sao_Paulo_2015/WS-Skill09-Sao-Paulo-Project-Session-3/Session-3-Dennis-Hilfinger/RegisterEventPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Session_3_Dennis_Hilfinger.RegisterEventPage.xaml
+build_metadata.AdditionalFiles.TargetPath = RegisterEventPage.xaml
+build_metadata.AdditionalFiles.RelativePath = RegisterEventPage.xaml
+
+[C:/2_WorldSkills/Training/Sao_Paulo_2015/WS-Skill09-Sao-Paulo-Project-Session-3/Session-3-Dennis-Hilfinger/RegisterPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Session_3_Dennis_Hilfinger.RegisterPage.xaml
+build_metadata.AdditionalFiles.TargetPath = RegisterPage.xaml
+build_metadata.AdditionalFiles.RelativePath = RegisterPage.xaml
+
+[C:/2_WorldSkills/Training/Sao_Paulo_2015/WS-Skill09-Sao-Paulo-Project-Session-3/Session-3-Dennis-Hilfinger/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Session_3_Dennis_Hilfinger.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/2_WorldSkills/Training/Sao_Paulo_2015/WS-Skill09-Sao-Paulo-Project-Session-3/Session-3-Dennis-Hilfinger/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Session_3_Dennis_Hilfinger.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/2_WorldSkills/Training/Sao_Paulo_2015/WS-Skill09-Sao-Paulo-Project-Session-3/Session-3-Dennis-Hilfinger/RunnerPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Session_3_Dennis_Hilfinger.RunnerPage.xaml
+build_metadata.AdditionalFiles.TargetPath = RunnerPage.xaml
+build_metadata.AdditionalFiles.RelativePath = RunnerPage.xaml
+
+[C:/2_WorldSkills/Training/Sao_Paulo_2015/WS-Skill09-Sao-Paulo-Project-Session-3/Session-3-Dennis-Hilfinger/SponsorRunnerPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Session_3_Dennis_Hilfinger.SponsorRunnerPage.xaml
+build_metadata.AdditionalFiles.TargetPath = SponsorRunnerPage.xaml
+build_metadata.AdditionalFiles.RelativePath = SponsorRunnerPage.xaml
+
+[C:/2_WorldSkills/Training/Sao_Paulo_2015/WS-Skill09-Sao-Paulo-Project-Session-3/Session-3-Dennis-Hilfinger/SponsorshipConfirmationPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Session_3_Dennis_Hilfinger.SponsorshipConfirmationPage.xaml
+build_metadata.AdditionalFiles.TargetPath = SponsorshipConfirmationPage.xaml
+build_metadata.AdditionalFiles.RelativePath = SponsorshipConfirmationPage.xaml

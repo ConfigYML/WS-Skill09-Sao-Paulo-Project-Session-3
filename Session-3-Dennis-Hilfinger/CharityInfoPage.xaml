@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Session_3_Dennis_Hilfinger.CharityInfoPage"
+             Title="CharityInfoPage">
+    <VerticalStackLayout>
+        <Label 
+            Text="Save The Children Fund"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontSize="30"/>
+        <Image 
+            Source="save_the_children_fund_logo.png"
+            HeightRequest="200"
+            WidthRequest="600"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Label 
+            Text="Save the Children is the world's leading independent organisation for children. We work in around 120 countries. We save children's lives; we fight for their rights; we help them fulfil their potential."
+            VerticalOptions="Center"
+            WidthRequest="1000"
+            HorizontalOptions="Center" />
+        <Label 
+            Text="We work to inspire breakthroughs in the way the world treats children and to achieve immediate and lasting change in their lives. Across all of our work, we pursue several core values: accountability, ambition, collaboration, creativity and integrity."
+            VerticalOptions="Center" 
+            WidthRequest="1000"
+            HorizontalOptions="Center" />
+        <Label 
+            Text="In 2014, we reached over 55 million children directly through our and our partners' work. Donate now to help us how the children of the world."
+            VerticalOptions="Center" 
+            WidthRequest="1000"
+            HorizontalOptions="Center" />
+    </VerticalStackLayout>
+</ContentPage>

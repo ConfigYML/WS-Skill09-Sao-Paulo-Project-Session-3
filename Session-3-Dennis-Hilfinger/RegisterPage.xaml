@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Session_3_Dennis_Hilfinger.RegisterPage"
+             Title="">
+    <Grid 
+        RowDefinitions="*, 5*, *"
+        ColumnDefinitions="*"
+        VerticalOptions="Fill"
+        HorizontalOptions="Fill">
+        <Grid 
+            ColumnDefinitions="*,4*,*"
+            HorizontalOptions="Fill"
+            VerticalOptions="End">
+            <Image 
+        Source="logo_2015_full_colour.png"
+        Margin="20"/>
+            <Label 
+        Grid.Column="1"
+        FontSize="40"
+        Text="MarathonSkills 2015"
+        HorizontalTextAlignment="Center"
+        VerticalTextAlignment="Center"
+        Padding="20"/>
+        </Grid>
+
+        <ScrollView
+            Grid.Row="1"
+            VerticalOptions="Start">
+            <VerticalStackLayout
+                Spacing="25">
+                <Label 
+                    Text="Register"
+                    HorizontalOptions="Center"
+                    FontSize="32"/>
+                <Label 
+                    WidthRequest="800"
+                    Text="Please fill out the following information to register as a runner"
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                    FontSize="20"/>
+                <Grid
+                    ColumnDefinitions="*,*"
+                    Padding="10"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center">
+
+                    <VerticalStackLayout 
+                        WidthRequest="250"
+                        Spacing="10" 
+                        Padding="25">
+                        <Entry
+                            x:Name="EmailEntry"
+                            Placeholder="Email"/>
+                        <Entry
+                            x:Name="PasswordEntry"
+                            Placeholder="Password"
+                            IsPassword="True" />
+                        <Entry
+                            x:Name="PasswordAgainEntry"
+                            Placeholder="Password"
+                            IsPassword="True"/>
+
+                        <Entry
+                            x:Name="FirstnameEntry"
+                            Placeholder="First name"/>
+
+                        <Entry
+                            x:Name="LastnameEntry"
+                            Placeholder="Last name"/>
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout 
+                        Grid.Column="2"
+                        WidthRequest="250"
+                        Spacing="10" 
+                        Padding="50">
+                        <Picker
+                            x:Name="GenderPicker"/>
+                        <DatePicker
+                            x:Name="BirthdatePicker" />
+                        <Picker
+                            x:Name="CountryPicker"/>
+                    </VerticalStackLayout>
+
+                </Grid>
+                <HorizontalStackLayout
+                    Spacing="15"
+                    HorizontalOptions="Center">
+                    <Button 
+                        Text="Register"
+                        WidthRequest="250"
+                        HeightRequest="50"
+                        Style="{StaticResource ButtonBlue}"
+                        Clicked="Register"/>
+                    <Button 
+                        Text="Cancel"
+                        WidthRequest="250"
+                        HeightRequest="50"
+                        Style="{StaticResource ButtonYellow}"
+                        Clicked="Cancel"/>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+            
+        </ScrollView>
+
+        <Label 
+            x:Name="TimerLabel"
+            Grid.Row="2"
+            HorizontalOptions="Fill"
+            VerticalOptions="End"
+            Text="0 days 0 hours and 0 minutes until the race starts!"
+            HorizontalTextAlignment="Center"
+            Padding="20"
+            Style="{StaticResource TimerLabel}"/>
+    </Grid>
+</ContentPage>

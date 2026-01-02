@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Session_3_Dennis_Hilfinger.MainPage">
+
+    <Grid 
+        RowDefinitions="*, 5*, *"
+        ColumnDefinitions="*"
+        VerticalOptions="Fill"
+        HorizontalOptions="Fill">
+        <Grid 
+            ColumnDefinitions="*,4*,*"
+            HorizontalOptions="Fill"
+            VerticalOptions="End">
+            <Image 
+                Source="logo_2015_full_colour.png"
+                Margin="20"/>
+            <Label 
+                Grid.Column="1"
+                FontSize="40"
+                Text="MarathonSkills 2015"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
+                Padding="20"/>
+        </Grid>
+
+        <ScrollView
+            Grid.Row="1"
+            VerticalOptions="Start">
+            <VerticalStackLayout
+                Padding="30"
+                Spacing="25"
+                VerticalOptions="Center">
+
+                <Label 
+                    Text="Sao Paulo, Brazil"
+                    HorizontalOptions="Center"
+                    FontSize="32"/>
+                <Label 
+                    Text="Saturday September 5th 2015"
+                    HorizontalOptions="Center"
+                    FontSize="32"/>
+                
+                <Button
+                    Text="Import staff data"
+                    Style="{StaticResource ButtonGreen}"
+                    WidthRequest="200"
+                    HeightRequest="50"
+                    HorizontalOptions="End"
+                    Clicked="ImportStaffData"/>
+
+                <Button
+                    Text="I want to be a runner"
+                    WidthRequest="300"
+                    HeightRequest="50"
+                    FontSize="16"
+                    Style="{StaticResource ButtonYellow}"
+                    HorizontalOptions="Center"
+                    Clicked="BecomeRunner"/>
+
+                <Button
+                    Text="I want to sponsor a runner"
+                    WidthRequest="300"
+                    HeightRequest="50"
+                    FontSize="16"
+                    Style="{StaticResource ButtonYellow}"
+                    HorizontalOptions="Center"
+                    Clicked="SponsorRunner"/>
+
+                <Button
+                    Text="I want to find out more"
+                    WidthRequest="300"
+                    HeightRequest="50"
+                    FontSize="16"
+                    Style="{StaticResource ButtonYellow}"
+                    HorizontalOptions="Center"
+                    Clicked="FindOutMore"/>
+
+                <Button 
+                    Text="Login"
+                    WidthRequest="200"
+                    HeightRequest="50"
+                    Style="{StaticResource ButtonBlue}"
+                    HorizontalOptions="End"
+                    Clicked="Login"/>   
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <Label 
+            x:Name="TimerLabel"
+            Grid.Row="2"
+            HorizontalOptions="Fill"
+            VerticalOptions="End"
+            Text="0 days 0 hours and 0 minutes until the race starts!"
+            HorizontalTextAlignment="Center"
+            Padding="20"
+            Style="{StaticResource TimerLabel}"/>
+    </Grid>
+
+</ContentPage>

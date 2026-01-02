@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Session_3_Dennis_Hilfinger.SponsorRunnerPage"
+             Title="">
+    <Grid 
+    RowDefinitions="*, 5*, *"
+    ColumnDefinitions="*"
+    VerticalOptions="Fill"
+    HorizontalOptions="Fill">
+        <Grid 
+        ColumnDefinitions="*,4*,*"
+        HorizontalOptions="Fill"
+        VerticalOptions="End">
+            <Image 
+            Source="logo_2015_full_colour.png"
+            Margin="20"/>
+            <Label 
+            Grid.Column="1"
+            FontSize="40"
+            Text="MarathonSkills 2015"
+            HorizontalTextAlignment="Center"
+            VerticalTextAlignment="Center"
+            Padding="20"/>
+        </Grid>
+
+        <ScrollView
+        Grid.Row="1">
+            <VerticalStackLayout
+            Padding="30"
+            Spacing="25"
+            VerticalOptions="Center">
+
+                <Label 
+                    Text="Sponsor runner"
+                    HorizontalOptions="Center"
+                    FontSize="32"/>
+                <Label 
+                    WidthRequest="800"
+                    Text="Please choose the runner you would like to sponsor and the amount you would like to sponsor them for. Thank you for your support of the runners and their charities!"
+                    HorizontalOptions="Center"
+                    FontSize="20"/>
+
+                <Grid ColumnDefinitions="*,*">
+                    <VerticalStackLayout
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        Spacing="25">
+                        
+                        <Label 
+                            Text="Sponsorship Details"
+                            FontSize="18"/>
+                        
+                        <Entry 
+                            x:Name="NameEntry"
+                            Placeholder="Your name"/>
+                        
+                        <Picker 
+                            x:Name="RunnerPicker"/>
+                        
+                        <Entry 
+                        x:Name="CardOwnerEntry"
+                        Placeholder="Credit Card Owner"/>
+                        
+                        <Entry 
+                        x:Name="CardNumberEntry"
+                        Placeholder="Credit Card Number"/>
+                        
+                        <DatePicker 
+                            x:Name="ExpiryDatePicker"/>
+                        
+                        <Entry 
+                            x:Name="CvcEntry"
+                            Placeholder="CVC"/>
+                        
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout
+                        Grid.Column="1"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        Spacing="25">
+
+                        <Label 
+                            Text="Charity"
+                            FontSize="18"/>
+                        
+                        <HorizontalStackLayout>
+                            
+                            <Label
+                            Text="Save The Children Fund"
+                            FontSize="16"/>
+                            
+                            <Button 
+                                Text="More Info"
+                                Style="{StaticResource ButtonBlue}"
+                                WidthRequest="100"
+                                HeightRequest="30"
+                                Clicked="MoreCharityInfo"/>
+                            
+                        </HorizontalStackLayout>
+
+                        <Label
+                            Text="Amount to donate"
+                            FontSize="18"/>
+                        
+                        <Label
+                            x:Name="AmountLabel"
+                            Text="$ 50"
+                            FontSize="50"/>
+
+                        <HorizontalStackLayout>
+                            
+                            <Stepper
+                                x:Name="AmountStepper"
+                                Minimum="1"
+                                Maximum="1000"
+                                Value="50"
+                                ValueChanged="ChangeValue"/>
+                            
+                            <Entry 
+                                x:Name="AmountEntry"/>
+
+                            <Button
+                                x:Name="EnterAmountBtn"
+                                Clicked="SetValue"
+                                Text="Enter amount"/>
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout>
+                            <Button 
+                                Text="Pay now"
+                                Clicked="PayNow"
+                                Style="{StaticResource ButtonGreen}"/>
+                            <Button
+                                Text="Cancel"
+                                Clicked="Cancel"
+                                Style="{StaticResource ButtonYellow}"/>
+                        </HorizontalStackLayout>
+
+                    </VerticalStackLayout>
+                </Grid>
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <Label 
+            x:Name="TimerLabel"
+        Grid.Row="2"
+        HorizontalOptions="Fill"
+        VerticalOptions="End"
+        Text="0 days 0 hours and 0 minutes until the race starts!"
+        HorizontalTextAlignment="Center"
+        Padding="20"
+        Style="{StaticResource TimerLabel}"/>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Session_3_Dennis_Hilfinger.RunnerPage"
+             Title="">
+    <Grid 
+        RowDefinitions="*, 5*, *"
+        ColumnDefinitions="*"
+        VerticalOptions="Fill"
+        HorizontalOptions="Fill">
+        <Grid 
+            ColumnDefinitions="*,4*,*"
+            HorizontalOptions="Fill"
+            VerticalOptions="End">
+            <Image 
+                Source="logo_2015_full_colour.png"
+                Margin="20"/>
+            <Label 
+                Grid.Column="1"
+                FontSize="40"
+                Text="MarathonSkills 2015"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
+                Padding="20"/>
+            <Button 
+                Grid.Column="2"
+                Text="Logout"
+                WidthRequest="200"
+                HeightRequest="50"
+                Style="{StaticResource ButtonGreen}"
+                Clicked="Logout"/>
+        </Grid>
+
+        <ScrollView
+            Grid.Row="1"
+            VerticalOptions="Start">
+            <VerticalStackLayout
+            Padding="30"
+            Spacing="25"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center">
+
+                <Label 
+                Text="Runner menu"
+                HorizontalOptions="Center"
+                FontSize="32"/>
+
+                <HorizontalStackLayout
+                    Spacing="50">
+                    <Button
+                     Text="Register for an event"
+                     WidthRequest="250"
+                     HeightRequest="50"
+                     FontSize="16"
+                     Style="{StaticResource ButtonYellow}"
+                     Clicked="RegisterForEvent"/>
+
+                    <Button 
+                     Text="My race results"
+                     WidthRequest="250"
+                     HeightRequest="50"
+                     Style="{StaticResource ButtonYellow}"
+                     Clicked="MyRaceResults"/>
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout
+                    Spacing="50">
+                    <Button
+                     Text="Edit your profile"
+                     WidthRequest="250"
+                     HeightRequest="50"
+                     FontSize="16"
+                     Style="{StaticResource ButtonYellow}"
+                     Clicked="EditYourProfile"/>
+
+                    <Button 
+                     Text="My sponsorship"
+                     WidthRequest="250"
+                     HeightRequest="50"
+                     Style="{StaticResource ButtonYellow}"
+                     Clicked="MySponsorship"/>
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout
+                    Spacing="50">
+                    <Button
+                         Text="Contact information"
+                         WidthRequest="250"
+                         HeightRequest="50"
+                         HorizontalOptions="Start"
+                         FontSize="16"
+                         Style="{StaticResource ButtonYellow}"
+                         Clicked="ContactInformation"/>
+
+                </HorizontalStackLayout>
+
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <Label 
+            x:Name="TimerLabel"
+            Grid.Row="2"
+            HorizontalOptions="Fill"
+            VerticalOptions="End"
+            Text="0 days 0 hours and 0 minutes until the race starts!"
+            HorizontalTextAlignment="Center"
+            Padding="20"
+            Style="{StaticResource TimerLabel}"/>
+    </Grid>
+</ContentPage>

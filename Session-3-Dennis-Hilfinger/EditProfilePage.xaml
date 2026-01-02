@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Session_3_Dennis_Hilfinger.EditProfilePage"
+             Title="">
+    <Grid 
+        RowDefinitions="*, 5*, *"
+        ColumnDefinitions="*"
+        VerticalOptions="Fill"
+        HorizontalOptions="Fill">
+        <Grid 
+            ColumnDefinitions="*,4*,*"
+            HorizontalOptions="Fill"
+            VerticalOptions="End">
+            <Image 
+                Source="logo_2015_full_colour.png"
+                Margin="20"/>
+            <Label 
+                Grid.Column="1"
+                FontSize="40"
+                Text="MarathonSkills 2015"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
+                Padding="20"/>
+            <Button 
+                Grid.Column="2"
+                Text="Logout"
+                WidthRequest="200"
+                HeightRequest="50"
+                Style="{StaticResource ButtonGreen}"
+                Clicked="Logout"/>
+        </Grid>
+
+        <ScrollView
+        Grid.Row="1"
+        VerticalOptions="Start">
+            <VerticalStackLayout
+            Spacing="25">
+                <Label 
+                Text="Edit your profile"
+                HorizontalOptions="Center"
+                FontSize="32"/>
+                <Grid
+                ColumnDefinitions="*,*"
+                Padding="10"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center">
+
+                    <VerticalStackLayout 
+                    WidthRequest="250"
+                    Spacing="10" 
+                    Padding="25">
+                        <Label
+                        x:Name="EmailLabel"/>
+
+                        <Entry
+                        x:Name="FirstnameEntry"
+                        Placeholder="First name"/>
+
+                        <Entry
+                        x:Name="LastnameEntry"
+                        Placeholder="Last name"/>
+
+                        <Picker
+                        x:Name="GenderPicker"/>
+                        
+                        <DatePicker
+                        x:Name="BirthdatePicker" />
+
+                        <Picker
+                        x:Name="CountryPicker"/>
+
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout 
+                    Grid.Column="2"
+                    WidthRequest="250"
+                    Spacing="10" 
+                    Padding="50">
+                        <Entry
+                        x:Name="PasswordEntry"
+                        Placeholder="Password"
+                        IsPassword="True" />
+                        <Entry
+                        x:Name="PasswordAgainEntry"
+                        Placeholder="Password"
+                        IsPassword="True"/>
+                    </VerticalStackLayout>
+
+                </Grid>
+                <HorizontalStackLayout
+                Spacing="15"
+                HorizontalOptions="Center">
+                    <Button 
+                    Text="Save"
+                    WidthRequest="250"
+                    HeightRequest="50"
+                    Style="{StaticResource ButtonBlue}"
+                    Clicked="SaveData"/>
+                    <Button 
+                    Text="Cancel"
+                    WidthRequest="250"
+                    HeightRequest="50"
+                    Style="{StaticResource ButtonYellow}"
+                    Clicked="Cancel"/>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+        </ScrollView>
+
+        <Label 
+        x:Name="TimerLabel"
+        Grid.Row="2"
+        HorizontalOptions="Fill"
+        VerticalOptions="End"
+        Text="0 days 0 hours and 0 minutes until the race starts!"
+        HorizontalTextAlignment="Center"
+        Padding="20"
+        Style="{StaticResource TimerLabel}"/>
+        </Grid>
+</ContentPage>
