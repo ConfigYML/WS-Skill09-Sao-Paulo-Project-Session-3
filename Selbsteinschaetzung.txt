@@ -1,0 +1,7 @@
+Session lief in Ordnung meiner Meinung nach. Jedoch hing ich zu lange daran, die Daten richtig für die 'MyRaceResuls' Seite richtig abzufragen (zu lange Überlegungen, zu komplexer Code -> daher definitiv im Nachhinein anschauen + verbessern und überlegen, was davon Sinn macht und welche Punkte eventuell zu komplex gelöst sind)
+Die Funktionalität für die interaktive Karte sowie die 'How long is a marathon?' Seite fehlen noch. 
+
+Learnings:
+- Datenbankanfragen per EF Core trainieren und schneller darin werden
+- Geschwindigkeit insgesamt natürlich noch ein Problem
+- Punkte aus vorherigen Sessions berücksichtigen
