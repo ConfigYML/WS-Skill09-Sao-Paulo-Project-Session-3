@@ -41,66 +41,79 @@ HorizontalOptions="Fill">
                     <AbsoluteLayout>
                         <Image 
                             Source="marathon_map.jpg"
-                            HeightRequest="600"
-                            WidthRequest="600"
-                            AbsoluteLayout.LayoutBounds="1, 1"/>
+                            AbsoluteLayout.LayoutBounds="0, 0, 600, 600"/>
                         <Button 
-                            WidthRequest="20"
-                            HeightRequest="20"
+                            x:Name="Checkpoint_1"
                             BackgroundColor="{StaticResource PrimaryYellow}"
-                            Margin="100 450"
-                            AbsoluteLayout.LayoutBounds="1, 1"
+                            AbsoluteLayout.LayoutBounds="450, 100, 20, 20"
+                            IsEnabled="True"
+                            Clicked="CheckpointClicked"/>
+                        <Button 
+                            x:Name="Checkpoint_2"
+                            BackgroundColor="{StaticResource PrimaryYellow}"
+                            AbsoluteLayout.LayoutBounds="550, 250, 20, 20"
+                            IsEnabled="True"
+                            Clicked="CheckpointClicked"/>
+                        <Button 
+                            x:Name="Checkpoint_3"
+                            BackgroundColor="{StaticResource PrimaryYellow}"
+                            AbsoluteLayout.LayoutBounds="400, 340, 20, 20"
+                            IsEnabled="True"
+                            Clicked="CheckpointClicked"/>
+                        <Button 
+                            x:Name="Checkpoint_4"
+                            BackgroundColor="{StaticResource PrimaryYellow}"
+                            AbsoluteLayout.LayoutBounds="370, 430, 20, 20"
+                            IsEnabled="True"
+                            Clicked="CheckpointClicked"/>
+                        <Button 
+                            x:Name="Checkpoint_5"
+                            BackgroundColor="{StaticResource PrimaryYellow}"
+                            AbsoluteLayout.LayoutBounds="250, 450, 20, 20"
+                            IsEnabled="True"
+                            Clicked="CheckpointClicked"/>
+                        <Button 
+                            x:Name="Checkpoint_6"
+                            BackgroundColor="{StaticResource PrimaryYellow}"
+                            AbsoluteLayout.LayoutBounds="120, 350, 20, 20"
+                            IsEnabled="True"
+                            Clicked="CheckpointClicked"/>
+                        <Button 
+                            x:Name="Checkpoint_7"
+                            BackgroundColor="{StaticResource PrimaryYellow}"
+                            AbsoluteLayout.LayoutBounds="80, 210, 20, 20"
+                            IsEnabled="True"
+                            Clicked="CheckpointClicked"/>
+                        <Button 
+                            x:Name="Checkpoint_8"
+                            BackgroundColor="{StaticResource PrimaryYellow}"
+                            AbsoluteLayout.LayoutBounds="230, 100, 20, 20"
+                            IsEnabled="True"
+                            Clicked="CheckpointClicked"/>
+                        <ImageButton
+                            Source="map_icon_start.png"
+                            AbsoluteLayout.LayoutBounds="360, 20, 20, 20"
                             IsEnabled="True"/>
-                        <Button 
-                            WidthRequest="20"
-                            HeightRequest="20"
-                            BackgroundColor="{StaticResource PrimaryYellow}"
-                            Margin="250 550"
-                            AbsoluteLayout.LayoutBounds="1, 1"
+                        <ImageButton
+                            Source="map_icon_start.png"
+                            AbsoluteLayout.LayoutBounds="300, 560, 20, 20"
                             IsEnabled="True"/>
-                        <Button 
-                            WidthRequest="20"
-                            HeightRequest="20"
-                            BackgroundColor="{StaticResource PrimaryYellow}"
-                            Margin="340 400"
-                            AbsoluteLayout.LayoutBounds="1, 1"
-                            IsEnabled="True"/>
-                        <Button 
-                            WidthRequest="20"
-                            HeightRequest="20"
-                            BackgroundColor="{StaticResource PrimaryYellow}"
-                            Margin="430 370"
-                            AbsoluteLayout.LayoutBounds="1, 1"
-                            IsEnabled="True"/>
-                        <Button 
-                            WidthRequest="20"
-                            HeightRequest="20"
-                            BackgroundColor="{StaticResource PrimaryYellow}"
-                            Margin="450 250"
-                            AbsoluteLayout.LayoutBounds="1, 1"
-                            IsEnabled="True"/>
-                        <Button 
-                            WidthRequest="20"
-                            HeightRequest="20"
-                            BackgroundColor="{StaticResource PrimaryYellow}"
-                            Margin="350 120"
-                            AbsoluteLayout.LayoutBounds="1, 1"
-                            IsEnabled="True"/>
-                        <Button 
-                            WidthRequest="20"
-                            HeightRequest="20"
-                            BackgroundColor="{StaticResource PrimaryYellow}"
-                            Margin="210 80"
-                            AbsoluteLayout.LayoutBounds="1, 1"
-                            IsEnabled="True"/>
-                        <Button 
-                            WidthRequest="20"
-                            HeightRequest="20"
-                            BackgroundColor="{StaticResource PrimaryYellow}"
-                            Margin="100 230"
-                            AbsoluteLayout.LayoutBounds="1, 1"
+                        <ImageButton
+                            Source="map_icon_start.png"
+                            AbsoluteLayout.LayoutBounds="200, 130, 20, 20"
                             IsEnabled="True"/>
                     </AbsoluteLayout>
+                    <VerticalStackLayout
+                        Grid.Column="1">
+                        <Label
+                            Text="No checkpoint selected"
+                            x:Name="CheckpointLabel"
+                            FontSize="20"
+                            FontAttributes="Bold"/>
+                        <VerticalStackLayout
+                            x:Name="ImageLayout"
+                            Spacing="5"/>
+                    </VerticalStackLayout>
                 </Grid>
             </VerticalStackLayout>
         </ScrollView>

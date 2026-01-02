@@ -126,6 +126,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = Session_3_Dennis_Hilfinger
 build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
 build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
 
+[C:/2_WorldSkills/Training/Sao_Paulo_2015/WS-Skill09-Sao-Paulo-Project-Session-3/Session-3-Dennis-Hilfinger/MarathonLengthPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Session_3_Dennis_Hilfinger.MarathonLengthPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MarathonLengthPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MarathonLengthPage.xaml
+
 [C:/2_WorldSkills/Training/Sao_Paulo_2015/WS-Skill09-Sao-Paulo-Project-Session-3/Session-3-Dennis-Hilfinger/MyRaceResultsPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Session_3_Dennis_Hilfinger.MyRaceResultsPage.xaml
