@@ -36,9 +36,9 @@ public partial class FindOutMorePage : ContentPage
     {
         await DisplayAlert("Functionality not implemented", "This feature is not implemented yet.", "OK");
     }
-    private async void MarathonInfo(object sender, EventArgs e)
+    private async void MarathonLength(object sender, EventArgs e)
     {
-        await DisplayAlert("Functionality not implemented", "This feature is not implemented yet.", "OK");
+        await Shell.Current.GoToAsync("MarathonLengthPage");
     }
     private async void ListOfCharities(object sender, EventArgs e)
     {

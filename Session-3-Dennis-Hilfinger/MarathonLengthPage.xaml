@@ -2,11 +2,281 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Session_3_Dennis_Hilfinger.MarathonLengthPage"
-             Title="MarathonLengthPage">
-    <VerticalStackLayout>
+             Title="">
+    <Grid 
+        RowDefinitions="*, 5*, *"
+        ColumnDefinitions="*"
+        VerticalOptions="Fill"
+        HorizontalOptions="Fill">
+        <Grid 
+            ColumnDefinitions="*,4*,*"
+            HorizontalOptions="Fill"
+            VerticalOptions="End">
+            <Image 
+                Source="logo_2015_full_colour.png"
+                Margin="20"/>
+            <Label 
+                Grid.Column="1"
+                FontSize="40"
+                Text="MarathonSkills 2015"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
+                Padding="20"/>
+        </Grid>
+
+        <ScrollView
+            Grid.Row="1">
+            <VerticalStackLayout
+    Padding="30"
+    Spacing="25"
+    VerticalOptions="Start">
+
+                <Label 
+        Text="How long is a marathon?"
+        HorizontalOptions="Center"
+        FontSize="32"/>
+
+                <Grid 
+                    ColumnDefinitions="2*,*">
+                    <VerticalStackLayout
+            VerticalOptions="Start"
+            HorizontalOptions="Center"
+            Spacing="25">
+                        <Label
+                x:Name="HeadingLabel" 
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            FontAttributes="Bold"
+                            FontSize="30"/>
+                        <Image
+                x:Name="MainImage"
+                            HeightRequest="500"/>
+                        <Label
+                x:Name="FactLabel" />
+                    </VerticalStackLayout>
+                    <VerticalStackLayout
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        Spacing="25"
+                        Grid.Column="1">
+                        <HorizontalStackLayout>
+                            <Button
+                                x:Name="SpeedBtn"
+                                Text="Speed"
+                                Style="{StaticResource ButtonBlue}"
+                                Clicked="SpeedClicked"/>
+                            <Button 
+                                x:Name="DistanceBtn"
+                                Text="Distance"
+                                Grid.Column="1"
+                                Clicked="DistanceClicked" />
+                        </HorizontalStackLayout>
+                        <Border 
+                            Stroke="DarkGray">
+                            <Grid 
+                                RowDefinitions="*, *">
+                                <Grid>
+                                    <VerticalStackLayout
+                                        x:Name="SpeedLayout"
+                                        IsVisible="True">
+                                        <HorizontalStackLayout 
+                                            Spacing="10" Padding="10">
+                                            <HorizontalStackLayout.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="ItemSelected" />
+                                            </HorizontalStackLayout.GestureRecognizers>
+                                            <Image 
+                                                Source="f1_car.jpg"
+                                                WidthRequest="150"
+                                                HeightRequest="150"/>
+                                            <Label 
+                                                Text="F1 car"
+                                                FontSize="20"
+                                                VerticalTextAlignment="Center"/>
+                                        </HorizontalStackLayout>
+                                        <HorizontalStackLayout 
+                                            Spacing="10" Padding="10">
+                                            <HorizontalStackLayout.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="ItemSelected" />
+                                            </HorizontalStackLayout.GestureRecognizers>
+                                            <Image 
+                                                Source="slug.jpg"
+                                                WidthRequest="150"
+                                                HeightRequest="150"/>
+                                            <Label 
+                                                Text="Slug"
+                                                FontSize="20"
+                                                VerticalTextAlignment="Center"/>
+                                        </HorizontalStackLayout>
+                                        <HorizontalStackLayout 
+                                            Spacing="10" Padding="10">
+                                            <HorizontalStackLayout.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="ItemSelected" />
+                                            </HorizontalStackLayout.GestureRecognizers>
+                                            <Image 
+                                                Source="horse.png"
+                                                WidthRequest="150"
+                                                HeightRequest="150"/>
+                                            <Label 
+                                                Text="Horse"
+                                                FontSize="20"
+                                                VerticalTextAlignment="Center"/>
+                                        </HorizontalStackLayout>
+                                        <HorizontalStackLayout 
+                                            Spacing="10" Padding="10">
+                                            <HorizontalStackLayout.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="ItemSelected" />
+                                            </HorizontalStackLayout.GestureRecognizers>
+                                            <Image 
+                                                Source="sloth.jpg"
+                                                WidthRequest="150"
+                                                HeightRequest="150"/>
+                                            <Label 
+                                                Text="Sloth"
+                                                FontSize="20"
+                                                VerticalTextAlignment="Center"/>
+                                        </HorizontalStackLayout>
+                                        <HorizontalStackLayout 
+                                        Spacing="10" Padding="10">
+                                            <HorizontalStackLayout.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="ItemSelected" />
+                                            </HorizontalStackLayout.GestureRecognizers>
+                                            <Image 
+                                            Source="capybara.jpg"
+                                            WidthRequest="150"
+                                            HeightRequest="150"/>
+                                            <Label 
+                                            Text="Capybara"
+                                            FontSize="20"
+                                            VerticalTextAlignment="Center"/>
+                                        </HorizontalStackLayout>
+                                        <HorizontalStackLayout 
+                                        Spacing="10" Padding="10">
+                                            <HorizontalStackLayout.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="ItemSelected" />
+                                            </HorizontalStackLayout.GestureRecognizers>
+                                            <Image 
+                                            Source="jaguar.jpg"
+                                            WidthRequest="150"
+                                            HeightRequest="150"/>
+                                            <Label 
+                                            Text="Jaguar"
+                                            FontSize="20"
+                                            VerticalTextAlignment="Center"/>
+                                        </HorizontalStackLayout>
+                                        <HorizontalStackLayout 
+                                        Spacing="10" Padding="10">
+                                            <HorizontalStackLayout.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="ItemSelected" />
+                                            </HorizontalStackLayout.GestureRecognizers>
+                                            <Image 
+                                            Source="worm.jpg"
+                                            WidthRequest="150"
+                                            HeightRequest="150"/>
+                                            <Label 
+                                            Text="Worm"
+                                            FontSize="20"
+                                            VerticalTextAlignment="Center"/>
+                                        </HorizontalStackLayout>
+                                    </VerticalStackLayout>
+                                    <VerticalStackLayout 
+                                        Grid.Row="1"
+                                        x:Name="DistanceLayout"
+                                        IsVisible="False">
+
+                                        <HorizontalStackLayout 
+                                        Spacing="10" Padding="10">
+                                            <HorizontalStackLayout.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="ItemSelected" />
+                                            </HorizontalStackLayout.GestureRecognizers>
+                                            <Image 
+                                            Source="bus.jpg"
+                                            WidthRequest="150"
+                                            HeightRequest="150"/>
+                                            <Label 
+                                            Text="Bus"
+                                            FontSize="20"
+                                            VerticalTextAlignment="Center"/>
+                                        </HorizontalStackLayout>
+
+                                        <HorizontalStackLayout 
+                                        Spacing="10" Padding="10">
+                                            <HorizontalStackLayout.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="ItemSelected" />
+                                            </HorizontalStackLayout.GestureRecognizers>
+                                            <Image 
+                                            Source="pair_of_havaianas.jpg"
+                                            WidthRequest="150"
+                                            HeightRequest="150"/>
+                                            <Label 
+                                            Text="Pair of havaianas"
+                                            FontSize="20"
+                                            VerticalTextAlignment="Center"/>
+                                        </HorizontalStackLayout>
+
+                                        <HorizontalStackLayout 
+                                        Spacing="10" Padding="10">
+                                            <HorizontalStackLayout.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="ItemSelected" />
+                                            </HorizontalStackLayout.GestureRecognizers>
+                                            <Image 
+                                            Source="airbus_a380.jpg"
+                                            WidthRequest="150"
+                                            HeightRequest="150"/>
+                                            <Label 
+                                            Text="Airbus A380"
+                                            FontSize="20"
+                                            VerticalTextAlignment="Center"/>
+                                        </HorizontalStackLayout>
+
+                                        <HorizontalStackLayout 
+                                        Spacing="10" Padding="10">
+                                            <HorizontalStackLayout.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="ItemSelected" />
+                                            </HorizontalStackLayout.GestureRecognizers>
+                                            <Image 
+                                            Source="football_field.jpg"
+                                            WidthRequest="150"
+                                            HeightRequest="150"/>
+                                            <Label 
+                                            Text="Football field"
+                                            FontSize="20"
+                                            VerticalTextAlignment="Center"/>
+                                        </HorizontalStackLayout>
+
+                                        <HorizontalStackLayout 
+                                        Spacing="10" Padding="10">
+                                            <HorizontalStackLayout.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="ItemSelected" />
+                                            </HorizontalStackLayout.GestureRecognizers>
+                                            <Image 
+                                            Source="ronaldinho.jpg"
+                                            WidthRequest="150"
+                                            HeightRequest="150"/>
+                                            <Label 
+                                            Text="Ronaldinho"
+                                            FontSize="20"
+                                            VerticalTextAlignment="Center"/>
+                                        </HorizontalStackLayout>
+                                    </VerticalStackLayout>
+                                </Grid>
+                            </Grid>
+
+                        </Border>
+
+                    </VerticalStackLayout>
+                </Grid>
+
+            </VerticalStackLayout>
+        </ScrollView>
+
         <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+            x:Name="TimerLabel"
+            Grid.Row="2"
+            HorizontalOptions="Fill"
+            VerticalOptions="End"
+            Text="0 days 0 hours and 0 minutes until the race starts!"
+            HorizontalTextAlignment="Center"
+            Padding="20"
+            Style="{StaticResource TimerLabel}"/>
+    </Grid>
 </ContentPage>

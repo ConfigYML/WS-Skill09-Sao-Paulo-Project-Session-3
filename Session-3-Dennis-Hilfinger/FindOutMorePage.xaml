@@ -78,7 +78,7 @@ HorizontalOptions="Fill">
 
                         <Button
                             Text="How long is a marathon?"
-                            Clicked="MarathonInfo"
+                            Clicked="MarathonLength"
                             FontSize="20"
                             WidthRequest="300"
                             HeightRequest="50"
