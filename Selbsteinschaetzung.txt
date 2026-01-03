@@ -5,3 +5,4 @@ Learnings:
 - Datenbankanfragen per EF Core trainieren und schneller darin werden
 - Geschwindigkeit insgesamt natürlich noch ein Problem
 - Punkte aus vorherigen Sessions berücksichtigen
+- große Probleme bei Berechnung der Platzierung (wahrscheinlich zu komplexer Ansatz), da hierbei auch noch ein im Grunde recht simpler Bug gelöst werden musste (großer Zeitfresser trotz Simplizität des Fehlers)
