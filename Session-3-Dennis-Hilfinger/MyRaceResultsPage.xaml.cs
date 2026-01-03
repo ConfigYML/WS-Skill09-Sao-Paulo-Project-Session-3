@@ -11,6 +11,8 @@ public partial class MyRaceResultsPage : ContentPage, IQueryAttributable
 {
     DispatcherTimer timer = new DispatcherTimer();
     User user;
+    DateTime dateMin;
+    DateTime dateMax;
 	public MyRaceResultsPage()
 	{
 		InitializeComponent();
@@ -85,27 +87,23 @@ public partial class MyRaceResultsPage : ContentPage, IQueryAttributable
                             race.RaceTime = raceTimeFormatted;
 
                             var overallRankSelect = db.RegistrationEvents
+                                .Include(r => r.Registration)
+                                .ThenInclude(r => r.Runner)
                                 .Where(r => r.EventId == result.EventId && r.RaceTime.HasValue && r.RaceTime > 0)
                                 .OrderBy(r => r.RaceTime);
-                            List<RankDTO> positions = new List<RankDTO>();
-                            for (int i = 1; i <= overallRankSelect.Count(); i++)
-                            {
-                                var rank = i;
-                                if (i > 1)
-                                {
-                                    var previousPos = positions.ElementAt(i - 2);
-                                    var targetPos = overallRankSelect.ElementAt(i - 2);
-                                    if (previousPos.Registration.RaceTime == targetPos.RaceTime)
-                                    {
-                                        rank = previousPos.rank;
-                                    } 
-                                }
-                                positions.Add(new RankDTO(){
-                                    rank = rank, 
-                                    Registration = overallRankSelect.ElementAt(i - 1) 
-                                });
-                            }
-                            race.OverallRank = "#" + positions.FirstOrDefault(p => p.Registration.RegistrationId == result.RegistrationId).rank.ToString();
+                            race.OverallRank = GetRank(overallRankSelect, result.RegistrationId);
+
+                            var categoryRankSelect = db.RegistrationEvents
+                                .Include(r => r.Registration)
+                                .ThenInclude(r => r.Runner)
+                                .Where(r => r.EventId == result.EventId && 
+                                        r.RaceTime.HasValue && 
+                                        r.RaceTime > 0 &&
+                                        r.Registration.Runner.Gender == user.Runners.First().Gender && 
+                                        r.Registration.Runner.DateOfBirth < dateMin && 
+                                        r.Registration.Runner.DateOfBirth > dateMax)
+                                .OrderBy(r => r.RaceTime);
+                            race.CategoryRank = GetRank(categoryRankSelect, result.RegistrationId);
                         }
                     }
                     AddResult(race);
@@ -113,8 +111,41 @@ public partial class MyRaceResultsPage : ContentPage, IQueryAttributable
             }
         } catch (Exception ex)
         {
-            DisplayAlert("Error occurred", "Something went wrong while loading your race results", "Ok");
+            DisplayAlert("Error occurred", "Something went wrong while loading your race results:" + ex.Message, "Ok");
         }
+    }
+
+    private string GetRank(IQueryable<RegistrationEvent> overallRankSelect, int registrationId)
+    {
+        List<RankDTO> positions = new List<RankDTO>();
+        for (int i = 1; i <= overallRankSelect.Count(); i++)
+        {
+            var rank = i;
+            if (i > 1)
+            {
+                var previousPos = positions.ElementAt(i - 2);
+                var targetPos = overallRankSelect.ElementAt(i - 1);
+                if (previousPos.Registration.RaceTime == targetPos.RaceTime)
+                {
+                    rank = previousPos.rank;
+                }
+            }
+            positions.Add(new RankDTO()
+            {
+                rank = rank,
+                Registration = overallRankSelect.ElementAt(i - 1)
+            });
+        }
+        return ("#" + positions.FirstOrDefault(p => p.Registration.RegistrationId == registrationId).rank.ToString());
+    }
+
+    private int GetAge(DateTime? DOB)
+    {
+        DateTime currentDate = DateTime.Now;
+        DateTime birthdate = (DateTime)DOB;
+        int age = currentDate.Year - birthdate.Year;
+        if (birthdate > currentDate.AddYears(-age)) age--;
+        return age;
     }
 
     private void AddResult(RegistrationDTO race)
@@ -155,30 +186,39 @@ public partial class MyRaceResultsPage : ContentPage, IQueryAttributable
 
     private void SetAgeCategory()
     {
-        DateTime currentDate = DateTime.Now;
-        DateTime birthdate = (DateTime)user.Runners.First().DateOfBirth;
-        int age = currentDate.Year - birthdate.Year;
-        if (birthdate > currentDate.AddYears(-age)) age--;
+        int age = GetAge(user.Runners.First().DateOfBirth);
 
         switch (age)
         {
             case <= 17:
                 AgeCategoryLabel.Text = "Under 18";
+                dateMin = DateTime.Now.AddYears(-0);
+                dateMax = DateTime.Now.AddYears(-(17 + 1));
                 break;
             case >= 18 and <= 29:
                 AgeCategoryLabel.Text = "18-29";
+                dateMin = DateTime.Now.AddYears(-18);
+                dateMax = DateTime.Now.AddYears(-(29 + 1));
                 break;
             case >= 30 and <= 39:
                 AgeCategoryLabel.Text = "30-39";
+                dateMin = DateTime.Now.AddYears(-30);
+                dateMax = DateTime.Now.AddYears(-(39 + 1));
                 break;
             case >= 40 and <= 55:
                 AgeCategoryLabel.Text = "40-55";
+                dateMin = DateTime.Now.AddYears(-40);
+                dateMax = DateTime.Now.AddYears(-(55 + 1));
                 break;
             case >= 56 and <= 70:
                 AgeCategoryLabel.Text = "56-70";
+                dateMin = DateTime.Now.AddYears(-56);
+                dateMax = DateTime.Now.AddYears(-(70 + 1));
                 break;
             case > 70:
                 AgeCategoryLabel.Text = "Over 70";
+                dateMin = DateTime.Now.AddYears(-70);
+                dateMax = DateTime.Now.AddYears(-(200 + 1));
                 break;
         }
     }

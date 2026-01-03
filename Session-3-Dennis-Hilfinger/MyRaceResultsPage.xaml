@@ -48,7 +48,7 @@
                 <Label 
             Text="This is a list of all your past race results for Marathon Skills. Overall rank compares all runners in the event. Category rank compares runners in the same gender and age categories."
             HorizontalOptions="Center"
-            FontSize="32"/>
+            FontSize="20"/>
 
                 <HorizontalStackLayout 
                     VerticalOptions="Center" 
